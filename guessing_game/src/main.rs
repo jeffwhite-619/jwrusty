@@ -59,6 +59,7 @@ fn guessing_game() {
     guesser.game_type = String::from(game_type.trim());
     if best_of_type.contains(&game_type.trim()) {
         best_of_game(guesser.clone());
+        return;
     }
     let spread_type = vec!["s", "S", "spread", "Spread"];
     if spread_type.contains(&game_type.trim()) {
